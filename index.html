@@ -350,25 +350,24 @@
     <script src="https://www.youtube.com/iframe_api"></script>
 
     <script>
-        const validUsers = [
-    'rohit', 'utkarsh', 'anita', 'arunima', 'bisheline', 'awa202453nure', 'admin', 'bal202448nure', 'fon202473nure', 'kon202400nure', 'kud202476nure', 'led202400mede', 'mbi202463scif', 'mbo202473nure', 'met202490nurf', 'ndi202439nure', 'ngu202447mide', 'ova202455nure', 'sim202488mede', 'nka202498nure', 'nch202400nure', 'tch202484mlse', 'ana202400nure', 'bak202475nure', 'son202400nure', 'bey202461nure', 'lin202494nure', 'bir202470nurf', 'mc_202463nure', 'you202435nure', 'ond202422mide', 'kik202405mide', 'pre202420nure', 'chi202430nure', 'eto202400nure', 'ban202454nure', 'yom202484nure', 'nko202422sagf', 'mam202423phae', 'mug202401nure', 'ban202457mlse', 'pan202453mite', 'nou202441nure', 'ach202446nure', 'cla202463labe', 'asa202498rade', 'agb202491nure', 'won202408nure', 'mos202452nure', 'ayu202456nure', 'toh202436nure', 'neb202423nure', 'feh202427nure', 'fof202477nure', 'fof202454nure', 'nye202459nure', 'abo202452mlse', 'nga202401nure', 'ken202438nure', 'ngo202495nure', 'tay202498rade', 'bon202419nure', 'tiz202493nure', 'tch202469mite', 'wai202400nure', 'aze202423nure', 'ate202420phae', 'fuh202481mlse', 'lon202428mide', 'ten202450nure', 'kin202400nurf', 'nfo202400nurf', 'wak202429soie', 'meb202454soif', 'gri202404nure', 'nga202443soie', 'nso202496phae', 'jeu202400nure', 'kwi202400nure', 'don202400nure', 'fon202426nure', 'kie202472nure', 'fon202464nure', '202400unke'
-
+       const validUsers = ['ab51ne', 'ac19pe', 'ac46me', 'ai55ne', 'an43me', 'as88re', 'at20me', 'aw83ne', 'ay13ne', 'ay56ne', 'az23ne', 'ba75ne', 'ba54me', 'ba57mi', 'ba94ne', 'be00ne', 'be14ne', 'bo19ne', 'ch30ne', 'choone', 'cl63le', 'do00ne', 'ek60me', 'em00ne', 'et00ne', 'eu64ne', 'fe27ne', 'fo59ne', 'fo64ne', 'fo73ne', 'gr01ne', 'jo58ne', 'ke38ne', 'ki72ne', 'ki05mi', 'ki63me', 'ko47ne', 'ku76me', 'kw03ne', 'le36me', 'li94ne', 'lo94me', 'ma03me', 'ma23pe', 'mb17le', 'mb73ne', 'mc63ne', 'me88me', 'me90ne', 'mo37ne', 'mu01ne', 'na00ne', 'nc54me', 'nd26me', 'ne23ne', 'nf71mi', 'ng01ne', 'ng95me', 'tc84me', 'nk98ne', 'no41ne', 'no50ne', 'ns00ne', 'ns05le', 'ns27pe', 'ny59me', 'nyoone', 'on22mi', 'ov55ne', 'pa03me', 'pr20ne', 'ra93de', 'si88me', 'ng37me', 'so28me', 'so88me', 'ta10ne', 'ta02me', 'ta79ne', 'te14ne', 'te23ne', 'te50ne', 'ti10ne', 'ti93ne', 'to36ne', 'to42ne', 'wa00ne', 'aw59mi', 'yo84ne', 'zo34me', 'mb63sf', 'bi70sf', 'nk22sf', 'ng43sf', 'ng67sf', 'nn58sf', 'ke47sf', 'nj35tf', 'si20oe', 'mb13oe', 'rohit', 'utkarsh', 'anita', 'arunima', 'rohit', 'utkarsh', 'bisheline', 'njousi', 'admin', 's1', 's2', 's3', 's4', 's5', 's6', 's7'
 ];
 
-
         // Function to handle login
-        function login() {
-            const username = document.getElementById('username').value.trim().toLowerCase();
-            const password = document.getElementById('password').value.trim().toLowerCase();
-            const error = document.getElementById('error');
+      function login() {
+    // Convert inputs to lowercase strings
+    const username = String(document.getElementById('username').value).trim().toLowerCase();
+    const password = String(document.getElementById('password').value).trim().toLowerCase();
+    const error = document.getElementById('error');
 
-            if (validUsers.includes(username) && username === password) {
-                document.getElementById('loginOverlay').style.display = 'none'; // Hide login overlay
-                document.getElementById('controlsContainer').style.display = 'flex'; // Show controls
-            } else {
-                error.textContent = "Invalid Username or Password!";
-            }
-        }
+    // Validate login
+    if (validUsers.includes(username) && username === password) {
+        document.getElementById('loginOverlay').style.display = 'none'; // Hide login overlay
+        document.getElementById('controlsContainer').style.display = 'flex'; // Show controls
+    } else {
+        error.textContent = "Invalid Username or Password!";
+    }
+}
 
         // Variables to hold the player and control buttons
         let player;
